@@ -118,6 +118,13 @@ main {
     left: 2px;
 }
 
+.winner {
+    font-family: "Pokemon Solid", Verdana, Tahoma;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0c6401;
+}
+
 @media (min-width: 768px) {
     .button-start {
         padding: .75rem 3rem;
