@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url(fonts/Pokemon\ Solid.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Pokemon Hollow";
+    src: url(fonts/Pokemon\ Hollow.ttf) format("truetype");
+}
+
+body {
+    background-color: rgb(255, 251, 176);
+}
+
+header {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose {
+    font-family: "Pokemon Hollow", Verdana, Tahoma;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(17, 15, 22);
+}
+
+.battle-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    font-family: "Pokemon Solid", Verdana, Tahoma;
+}
+
+.text-input {
+    margin-inline: 1.5rem;
+    margin-top: 32px;
+    box-sizing: border-box;
+    border: solid currentColor;
+    color: currentColor;
+    background: transparent;
+    max-height: 19px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #353001;
+}
+
+.load-battle {
+    list-style-type: none;
+    display: flex;
+    font-family: "Pokemon Solid", Verdana, Tahoma;
+    /* color: rgb(55, 3, 187); */
+}
+
+.dynamic-cardfirst {
+    margin-right: 4rem;
+    color: rgb(250, 42, 42);
+}
+
+.dynamic-cardsecond {
+    margin-left: 4rem;
+    color: rgb(81, 84, 226);
+}
+
+.button-start {
+    background-color: rgb(202, 216, 4);
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: "Pokemon Hollow", Verdana, Tahoma;
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-start:focus {
+    outline: 0;
+}
+
+.button-start:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.button-start:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+@media (min-width: 768px) {
+    .button-start {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
+    }
+}
