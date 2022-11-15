@@ -24,16 +24,24 @@ async function createBattle() {
 
 async function addCard(input) {
     let name = document.getElementById(input).value.toLowerCase();
-    let stats = await fetchPokemonInfo(name);
-    let statsLi = document.createElement("li");
+    fetchPokemonInfo(name).then((stats) => {
+        console.log(stats);
+    })  
     
-    statsLi.setAttribute("class", "dynamic-card" + input);
-    for (key in stats) {
-        let stat = document.createElement("ol");
-        stat.innerHTML = key[0].toUpperCase() + key.slice(1) + ': ' + stats[key];
-        statsLi.appendChild(stat);
-    }
-    document.getElementById('battle').appendChild(statsLi);
+    
+    // if(error != undefined) {
+    //     document.getElementById('battle').innerHTML = error;
+    //     return;
+    // }
+    // let statsLi = document.createElement("li");
+    
+    // statsLi.setAttribute("class", "dynamic-card" + input);
+    // for (key in stats) {
+    //     let stat = document.createElement("ol");
+    //     stat.innerHTML = key[0].toUpperCase() + key.slice(1) + ': ' + stats[key];
+    //     statsLi.appendChild(stat);
+    // }
+    // document.getElementById('battle').appendChild(statsLi);
 }
 
 // function statAverage(stats) {
